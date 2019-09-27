@@ -126,22 +126,22 @@
 <meta property="og:site_name" content="JoeBlog">
 <meta property="og:description" content="由于我们经常发布项目到测试服，在测试服上调试一些本地无法调试的东西，所以出现了各种打包，然后上传、启动，时间都耗费在这无聊的事情上面了，偶然在网上看到IntelliJ IDEA有 Cloud Toolkit 这个插件，安装了一下，打包、上传、启动一条龙搞定，下面介绍一下使用Cloud Toolkit部署SpringBoot项目到服务器。 准备工作在 IntelliJ IDEA 中安装和配置 Clo">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://aliware-images.oss-cn-hangzhou.aliyuncs.com/Alibaba_Cloud_Toolkit/db_cloudtoolkit_idea_search.png">
-<meta property="og:image" content="https://aliware-images.oss-cn-hangzhou.aliyuncs.com/Alibaba_Cloud_Toolkit/db_cloudtoolkit_idea_install.png">
-<meta property="og:image" content="https://aliware-images.oss-cn-hangzhou.aliyuncs.com/Alibaba_Cloud_Toolkit/db_cloudtoolkit_idea_installsuccess.png">
-<meta property="og:image" content="c:/Users/THINKPAD/AppData/Roaming/Typora/typora-user-images/1563002387661.png">
-<meta property="og:image" content="c:/Users/THINKPAD/AppData/Roaming/Typora/typora-user-images/1563002794445.png">
-<meta property="og:image" content="c:/Users/THINKPAD/AppData/Roaming/Typora/typora-user-images/1563003014470.png">
-<meta property="og:image" content="c:/Users/THINKPAD/AppData/Roaming/Typora/typora-user-images/1563003516729.png">
-<meta property="og:image" content="c:/Users/THINKPAD/AppData/Roaming/Typora/typora-user-images/1563003630680.png">
-<meta property="og:image" content="c:/Users/THINKPAD/AppData/Roaming/Typora/typora-user-images/1563004067649.png">
-<meta property="og:image" content="c:/Users/THINKPAD/AppData/Roaming/Typora/typora-user-images/1563004135788.png">
-<meta property="og:image" content="c:/Users/THINKPAD/AppData/Roaming/Typora/typora-user-images/1563004194670.png">
-<meta property="og:updated_time" content="2019-09-27T09:13:11.164Z">
+<meta property="og:image" content="https://xbq.oss-cn-shenzhen.aliyuncs.com/blog/Toolkit/111111111.png">
+<meta property="og:image" content="https://xbq.oss-cn-shenzhen.aliyuncs.com/blog/Toolkit/222222.png">
+<meta property="og:image" content="https://xbq.oss-cn-shenzhen.aliyuncs.com/blog/Toolkit/3333333.png">
+<meta property="og:image" content="https://xbq.oss-cn-shenzhen.aliyuncs.com/blog/Toolkit/1563002387661.png">
+<meta property="og:image" content="https://xbq.oss-cn-shenzhen.aliyuncs.com/blog/Toolkit/1563002794445.png">
+<meta property="og:image" content="https://xbq.oss-cn-shenzhen.aliyuncs.com/blog/Toolkit/1563003014470.png">
+<meta property="og:image" content="https://xbq.oss-cn-shenzhen.aliyuncs.com/blog/Toolkit/1563003516729.png">
+<meta property="og:image" content="https://xbq.oss-cn-shenzhen.aliyuncs.com/blog/Toolkit/1563003630680.png">
+<meta property="og:image" content="https://xbq.oss-cn-shenzhen.aliyuncs.com/blog/Toolkit/1563004067649.png">
+<meta property="og:image" content="https://xbq.oss-cn-shenzhen.aliyuncs.com/blog/Toolkit/1563004135788.png">
+<meta property="og:image" content="https://xbq.oss-cn-shenzhen.aliyuncs.com/blog/Toolkit/1563004194670.png">
+<meta property="og:updated_time" content="2019-09-27T09:36:02.300Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用Cloud Toolkit部署SpringBoot项目到服务器">
 <meta name="twitter:description" content="由于我们经常发布项目到测试服，在测试服上调试一些本地无法调试的东西，所以出现了各种打包，然后上传、启动，时间都耗费在这无聊的事情上面了，偶然在网上看到IntelliJ IDEA有 Cloud Toolkit 这个插件，安装了一下，打包、上传、启动一条龙搞定，下面介绍一下使用Cloud Toolkit部署SpringBoot项目到服务器。 准备工作在 IntelliJ IDEA 中安装和配置 Clo">
-<meta name="twitter:image" content="https://aliware-images.oss-cn-hangzhou.aliyuncs.com/Alibaba_Cloud_Toolkit/db_cloudtoolkit_idea_search.png">
+<meta name="twitter:image" content="https://xbq.oss-cn-shenzhen.aliyuncs.com/blog/Toolkit/111111111.png">
 
 
 
@@ -473,7 +473,7 @@
 
       
         <p>由于我们经常发布项目到测试服，在测试服上调试一些本地无法调试的东西，所以出现了各种打包，然后上传、启动，时间都耗费在这无聊的事情上面了，偶然在网上看到IntelliJ IDEA有 Cloud Toolkit 这个插件，安装了一下，打包、上传、启动一条龙搞定，下面介绍一下使用Cloud Toolkit部署SpringBoot项目到服务器。</p>
-<h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4><p>在 IntelliJ IDEA 中安装和配置 Cloud Toolkit 前，需要完成以下准备工作：</p>
+<h5 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h5><p>在 IntelliJ IDEA 中安装和配置 Cloud Toolkit 前，需要完成以下准备工作：</p>
 <ul>
 <li>下载并安装 <a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">JDK 1.8 或更高版本</a>。</li>
 <li>下载并安装 <a href="https://www.jetbrains.com/idea/download" target="_blank" rel="noopener">IntelliJ IDEA ( 2018.1 或更高版本)</a>。</li>
@@ -494,20 +494,20 @@
 <li><p>在 <strong>Plugins</strong> 区域的搜索栏中输入 <strong>Alibaba Cloud Toolkit</strong>。</p>
 </li>
 <li><p>单击 <strong>Search in repositories</strong>。</p>
-<p><a href="https://aliware-images.oss-cn-hangzhou.aliyuncs.com/Alibaba_Cloud_Toolkit/db_cloudtoolkit_idea_search.png" target="_blank" rel="noopener"><img src="https://aliware-images.oss-cn-hangzhou.aliyuncs.com/Alibaba_Cloud_Toolkit/db_cloudtoolkit_idea_search.png" alt="搜索 Cloud Toolkit"></a></p>
+<p><img src="https://xbq.oss-cn-shenzhen.aliyuncs.com/blog/Toolkit/111111111.png" alt="1563002387661"></p>
 </li>
 </ol>
 </li>
 <li><p>在弹出的 <strong>Browse Repositories</strong> 对话框中 <strong>Alibaba Cloud Toolkit</strong> 区域单击 <strong>Install</strong>。</p>
-<p><a href="https://aliware-images.oss-cn-hangzhou.aliyuncs.com/Alibaba_Cloud_Toolkit/db_cloudtoolkit_idea_install.png" target="_blank" rel="noopener"><img src="https://aliware-images.oss-cn-hangzhou.aliyuncs.com/Alibaba_Cloud_Toolkit/db_cloudtoolkit_idea_install.png" alt="安装 Cloud Toolkit"></a></p>
+<p><img src="https://xbq.oss-cn-shenzhen.aliyuncs.com/blog/Toolkit/222222.png" alt="1563002387661"></p>
 </li>
 <li><p>按照 IntelliJ IDEA 安装页面的提示，完成后续安装步骤。</p>
 </li>
 </ol>
 <h4 id="结果验证"><a href="#结果验证" class="headerlink" title="结果验证"></a>结果验证</h4><p>IntelliJ IDEA 重启后，在菜单栏中选择 <strong>File</strong> &gt; <strong>Settings</strong>，在 <strong>Settings</strong> 对话框左侧的导航栏中可以看到 <strong>Alibaba Cloud Toolkit</strong>，则说明安装成功。</p>
-<p><a href="https://aliware-images.oss-cn-hangzhou.aliyuncs.com/Alibaba_Cloud_Toolkit/db_cloudtoolkit_idea_installsuccess.png" target="_blank" rel="noopener"><img src="https://aliware-images.oss-cn-hangzhou.aliyuncs.com/Alibaba_Cloud_Toolkit/db_cloudtoolkit_idea_installsuccess.png" alt="安装成功"></a></p>
+<p><img src="https://xbq.oss-cn-shenzhen.aliyuncs.com/blog/Toolkit/3333333.png" alt="1563002387661"></p>
 <p>Cloud Toolkit 的核心功能</p>
-<p><img src="C:\Users\THINKPAD\AppData\Roaming\Typora\typora-user-images\1563002387661.png" alt="1563002387661"></p>
+<p><img src="https://xbq.oss-cn-shenzhen.aliyuncs.com/blog/Toolkit/1563002387661.png" alt="1563002387661"></p>
 <ul>
 <li><strong>Deploy to Host：</strong>部署到任意服务器。这一个功能决定了 Cloud Toolkit 强大的之处就是可以使得每个开发者受益，它其实并不是和阿里云厂商强绑定的。<strong>我会在下文重点测评下这个功能</strong>。</li>
 <li><strong>Deploy to ECS：</strong>这里的 ECS 指的阿里云的 ECS，如果你的服务部署在阿里云 ECS 上，可以选择使用这个功能，获得比 Deploy to Host 更加丰富的功能。</li>
@@ -517,20 +517,20 @@
 <p>这里只介绍下 <strong>Deploy to Host</strong>（部署到任意服务器），这里先部署到虚拟机上哈。</p>
 <p>使用 Cloud Toolkit 把应用部署到任意服务器</p>
 <p>IDEA菜单栏中的Tools –&gt; Alibaba Cloud –&gt; Alibaba Cloud View –&gt; Host</p>
-<p><img src="C:\Users\THINKPAD\AppData\Roaming\Typora\typora-user-images\1563002794445.png" alt="1563002794445"></p>
+<p><img src="https://xbq.oss-cn-shenzhen.aliyuncs.com/blog/Toolkit/1563002794445.png" alt="1563002794445"></p>
 <p>点击上面截图中的Add Host</p>
-<p><img src="C:\Users\THINKPAD\AppData\Roaming\Typora\typora-user-images\1563003014470.png" alt="1563003014470"></p>
+<p><img src="https://xbq.oss-cn-shenzhen.aliyuncs.com/blog/Toolkit/1563003014470.png" alt="1563003014470"></p>
 <p>成功连接之后，右键 项目 –&gt; Alibaba Cloud –&gt; Deploy to Host</p>
-<p><img src="C:\Users\THINKPAD\AppData\Roaming\Typora\typora-user-images\1563003516729.png" alt="1563003516729"></p>
-<p><img src="C:\Users\THINKPAD\AppData\Roaming\Typora\typora-user-images\1563003630680.png" alt="1563003630680"></p>
+<p><img src="https://xbq.oss-cn-shenzhen.aliyuncs.com/blog/Toolkit/1563003516729.png" alt="1563003516729"></p>
+<p><img src="https://xbq.oss-cn-shenzhen.aliyuncs.com/blog/Toolkit/1563003630680.png" alt="1563003630680"></p>
 <p>查看服务器上的文件：</p>
-<p><img src="C:\Users\THINKPAD\AppData\Roaming\Typora\typora-user-images\1563004067649.png" alt="1563004067649"></p>
+<p><img src="https://xbq.oss-cn-shenzhen.aliyuncs.com/blog/Toolkit/1563004067649.png" alt="1563004067649"></p>
 <p>项目代码：</p>
-<p><img src="C:\Users\THINKPAD\AppData\Roaming\Typora\typora-user-images\1563004135788.png" alt="1563004135788"></p>
+<p><img src="https://xbq.oss-cn-shenzhen.aliyuncs.com/blog/Toolkit/1563004135788.png" alt="1563004135788"></p>
 <p>启动脚本（来源地址：<a href="https://www.cnblogs.com/wangfajun/p/9585530.html" target="_blank" rel="noopener">https://www.cnblogs.com/wangfajun/p/9585530.html</a>）</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>!/bin/bash</span><br><span class="line">export JAVA_HOME=/root/tools/jdk1.8.0_181</span><br><span class="line">export JRE_HOME=/$JAVA_HOME/jre</span><br><span class="line">export CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</span><br><span class="line">export PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>这里可替换为你自己的执行程序，其他代码无需更改</span><br><span class="line">APP_NAME=/usr/local/test/demo111-0.0.1-SNAPSHOT.jar</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>使用说明，用来提示输入参数</span><br><span class="line">usage() &#123;</span><br><span class="line">    echo "Usage: sh robotcenter.sh [start|stop|restart|status]"</span><br><span class="line">    exit 1</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>检查程序是否在运行</span><br><span class="line">is_exist()&#123;</span><br><span class="line">  pid=`ps -ef|grep $APP_NAME|grep -v grep|awk '&#123;print $2&#125;'`</span><br><span class="line"><span class="meta">  #</span>如果不存在返回1，存在返回0     </span><br><span class="line">  if [ -z "$&#123;pid&#125;" ]; then</span><br><span class="line">   return 1</span><br><span class="line">  else</span><br><span class="line">    return 0</span><br><span class="line">  fi</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>启动方法</span><br><span class="line">start()&#123;</span><br><span class="line">  is_exist</span><br><span class="line">  if [ $? -eq 0 ]; then</span><br><span class="line">    echo "$&#123;APP_NAME&#125; is already running. pid=$&#123;pid&#125;"</span><br><span class="line">  else</span><br><span class="line">    nohup java -jar $&#123;APP_NAME&#125;  &gt;robotcenter.out 2&gt;&amp;1 &amp;</span><br><span class="line">  fi</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>停止方法</span><br><span class="line">stop()&#123;</span><br><span class="line">  is_exist</span><br><span class="line">  if [ $? -eq "0" ]; then</span><br><span class="line">    kill -9 $pid</span><br><span class="line">  else</span><br><span class="line">    echo "$&#123;APP_NAME&#125; is not running"</span><br><span class="line">  fi  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>输出运行状态</span><br><span class="line">status()&#123;</span><br><span class="line">  is_exist</span><br><span class="line">  if [ $? -eq "0" ]; then</span><br><span class="line">    echo "$&#123;APP_NAME&#125; is running. Pid is $&#123;pid&#125;"</span><br><span class="line">  else</span><br><span class="line">    echo "$&#123;APP_NAME&#125; is NOT running."</span><br><span class="line">  fi</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>重启</span><br><span class="line">restart()&#123;</span><br><span class="line">  stop</span><br><span class="line">  sleep 5</span><br><span class="line">  start</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>根据输入参数，选择执行对应方法，不输入则执行使用说明</span><br><span class="line">case "$1" in</span><br><span class="line">  "start")</span><br><span class="line">    start</span><br><span class="line">    ;;</span><br><span class="line">  "stop")</span><br><span class="line">    stop</span><br><span class="line">    ;;</span><br><span class="line">  "status")</span><br><span class="line">    status</span><br><span class="line">    ;;</span><br><span class="line">  "restart")</span><br><span class="line">    restart</span><br><span class="line">    ;;</span><br><span class="line">  *)</span><br><span class="line">    usage</span><br><span class="line">    ;;</span><br><span class="line">esac</span><br></pre></td></tr></table></figure>
 <p>访问浏览器：</p>
-<p><img src="C:\Users\THINKPAD\AppData\Roaming\Typora\typora-user-images\1563004194670.png" alt="1563004194670"></p>
+<p><img src="https://xbq.oss-cn-shenzhen.aliyuncs.com/blog/Toolkit/1563004194670.png" alt="1563004194670"></p>
 <p>大功告成！！</p>
 <p>详细教程：</p>
 <p><a href="https://helpcdn.aliyun.com/document_detail/98762.html" target="_blank" rel="noopener">https://helpcdn.aliyun.com/document_detail/98762.html</a></p>
@@ -853,7 +853,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#准备工作"><span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-Cloud-Toolkit"><span class="nav-text">安装 Cloud Toolkit</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#结果验证"><span class="nav-text">结果验证</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#准备工作"><span class="nav-text">准备工作</span></a></li></ol><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-Cloud-Toolkit"><span class="nav-text">安装 Cloud Toolkit</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#结果验证"><span class="nav-text">结果验证</span></a></li></div>
             
 
           </div>
