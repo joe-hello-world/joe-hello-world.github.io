@@ -119,22 +119,20 @@
 
 
 
-<meta name="description" content="下载地址 https://golang.org/dl ，这个地址需要翻墙下载 https://studygolang.com/dl ，可直接在此网站下载，windows下载如下：   安装配置环境变量1.假设将安装包安装在D盘，新建 如下环境变量：  GPROOT：Go的安装路径 GOPATH：Go的工程路径（如果有多个，就以分号分隔添加）   在PATH中增加：D:\Go\bin;%GOPATH">
+<meta name="description" content="1.说一下es的分布式架构原理 / es是如何实现分布式的核心思想就是在多台机器上启动多个 es 进程实例，组成了一个 es 集群。 创建一个index，index包含多个shard，每个shard都是一个最小工作单元，每个 shard 存储部分数据。 一个shard 的数据实际是有多个备份，就是说每个 shard 都有一个 primary shard，接受写和读请求，但是还有几个 replica">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Go语言学习(2) - HelloWorld">
-<meta property="og:url" content="http://yoursite.com/2018/11/26/Go语言学习-2-HelloWorld/index.html">
+<meta property="og:title" content="分布式搜索引擎面试题（二）">
+<meta property="og:url" content="http://yoursite.com/2019/10/23/分布式搜索引擎面试题（二）/index.html">
 <meta property="og:site_name" content="JoeBlog">
-<meta property="og:description" content="下载地址 https://golang.org/dl ，这个地址需要翻墙下载 https://studygolang.com/dl ，可直接在此网站下载，windows下载如下：   安装配置环境变量1.假设将安装包安装在D盘，新建 如下环境变量：  GPROOT：Go的安装路径 GOPATH：Go的工程路径（如果有多个，就以分号分隔添加）   在PATH中增加：D:\Go\bin;%GOPATH">
+<meta property="og:description" content="1.说一下es的分布式架构原理 / es是如何实现分布式的核心思想就是在多台机器上启动多个 es 进程实例，组成了一个 es 集群。 创建一个index，index包含多个shard，每个shard都是一个最小工作单元，每个 shard 存储部分数据。 一个shard 的数据实际是有多个备份，就是说每个 shard 都有一个 primary shard，接受写和读请求，但是还有几个 replica">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/fRIibNUyzo4JtiayqnNmJFw69m7xWicKRWG4b4BsOExhllHFO1iar43twAKicJJR9ovXh4NSY0CxIpaVU5wlUNibMlWw/640?wx_fmt=png">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/fRIibNUyzo4JtiayqnNmJFw69m7xWicKRWGzTImmTpZicZkfZswjZg6zNu5FJQ66cLzFf7rpAxqnnsmQDzok3GNuhA/640?wx_fmt=png">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/fRIibNUyzo4JtiayqnNmJFw69m7xWicKRWG6WnTqrDOq0Lw3CWqzOhrE9Nw00libc7xRic3M3Jb8Q2bDdsxcxiaGbldw/640?wx_fmt=png">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/fRIibNUyzo4JtiayqnNmJFw69m7xWicKRWGuq5yxGcbz2ib9o4rQM0hRCa5gCicjnOkbDK3QvROVWSibKbm7eW7KpXKg/640?wx_fmt=png">
-<meta property="og:updated_time" content="2018-11-26T13:35:49.362Z">
+<meta property="og:image" content="https://xbq.oss-cn-shenzhen.aliyuncs.com/blog/es/1571820475160.png">
+<meta property="og:image" content="https://xbq.oss-cn-shenzhen.aliyuncs.com/blog/es/1571823227631.png">
+<meta property="og:updated_time" content="2019-10-23T09:42:58.153Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Go语言学习(2) - HelloWorld">
-<meta name="twitter:description" content="下载地址 https://golang.org/dl ，这个地址需要翻墙下载 https://studygolang.com/dl ，可直接在此网站下载，windows下载如下：   安装配置环境变量1.假设将安装包安装在D盘，新建 如下环境变量：  GPROOT：Go的安装路径 GOPATH：Go的工程路径（如果有多个，就以分号分隔添加）   在PATH中增加：D:\Go\bin;%GOPATH">
-<meta name="twitter:image" content="https://mmbiz.qpic.cn/mmbiz_png/fRIibNUyzo4JtiayqnNmJFw69m7xWicKRWG4b4BsOExhllHFO1iar43twAKicJJR9ovXh4NSY0CxIpaVU5wlUNibMlWw/640?wx_fmt=png">
+<meta name="twitter:title" content="分布式搜索引擎面试题（二）">
+<meta name="twitter:description" content="1.说一下es的分布式架构原理 / es是如何实现分布式的核心思想就是在多台机器上启动多个 es 进程实例，组成了一个 es 集群。 创建一个index，index包含多个shard，每个shard都是一个最小工作单元，每个 shard 存储部分数据。 一个shard 的数据实际是有多个备份，就是说每个 shard 都有一个 primary shard，接受写和读请求，但是还有几个 replica">
+<meta name="twitter:image" content="https://xbq.oss-cn-shenzhen.aliyuncs.com/blog/es/1571820475160.png">
 
 
 
@@ -164,13 +162,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/11/26/Go语言学习-2-HelloWorld/">
+  <link rel="canonical" href="http://yoursite.com/2019/10/23/分布式搜索引擎面试题（二）/">
 
 
 
 
 
-  <title>Go语言学习(2) - HelloWorld | JoeBlog</title>
+  <title>分布式搜索引擎面试题（二） | JoeBlog</title>
   
 
 
@@ -358,7 +356,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/26/Go语言学习-2-HelloWorld/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/23/分布式搜索引擎面试题（二）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Joe Beckham">
@@ -375,7 +373,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Go语言学习(2) - HelloWorld</h1>
+          <h1 class="post-title" itemprop="name headline">分布式搜索引擎面试题（二）</h1>
         
 
         <div class="post-meta">
@@ -387,8 +385,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-26T21:32:55+08:00">
-                2018-11-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-23T16:46:18+08:00">
+                2019-10-23
               </time>
             
 
@@ -405,7 +403,7 @@
 
           
           
-             <span id="/2018/11/26/Go语言学习-2-HelloWorld/" class="leancloud_visitors" data-flag-title="Go语言学习(2) - HelloWorld">
+             <span id="/2019/10/23/分布式搜索引擎面试题（二）/" class="leancloud_visitors" data-flag-title="分布式搜索引擎面试题（二）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -428,7 +426,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,263 字
+                  1,824 字
                 </span>
               
 
@@ -444,7 +442,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5 分钟
+                  7 分钟
                 </span>
               
             </div>
@@ -465,89 +463,59 @@
       
 
       
-        <h3 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h3><ol>
-<li><a href="https://golang.org/dl" target="_blank" rel="noopener">https://golang.org/dl</a> ，这个地址需要翻墙下载</li>
-<li><a href="https://studygolang.com/dl" target="_blank" rel="noopener">https://studygolang.com/dl</a> ，可直接在此网站下载，windows下载如下：</li>
+        <h4 id="1-说一下es的分布式架构原理-es是如何实现分布式的"><a href="#1-说一下es的分布式架构原理-es是如何实现分布式的" class="headerlink" title="1.说一下es的分布式架构原理 / es是如何实现分布式的"></a>1.说一下es的分布式架构原理 / es是如何实现分布式的</h4><p>核心思想就是在多台机器上启动多个 es 进程实例，组成了一个 es 集群。</p>
+<p>创建一个index，index包含多个shard，每个shard都是一个最小工作单元，每个 shard 存储部分数据。</p>
+<p>一个shard 的数据实际是有多个备份，就是说每个 shard 都有一个 <code>primary shard</code>，接受写和读请求，但是还有几个 <code>replica shard</code>，负责容错，以及承担读请求负载。<code>primary shard</code> 写入数据之后，会将数据同步到其他几个 <code>replica shard</code> 上去。这样，每个 shard 的数据都有多个备份，如果某个机器宕机了，还有别的数据副本在别的机器上呢，这样就实现了高可用。</p>
+<p><img src="https://xbq.oss-cn-shenzhen.aliyuncs.com/blog/es/1571820475160.png" alt="1571820475160"></p>
+<p>es 集群多个节点，会自动选举一个节点为 master 节点，这个 master 节点其实就是干一些管理的工作的，比如维护索引元数据、负责切换 primary shard 和 replica shard 身份等。要是 master 节点宕机了，那么会重新选举一个节点为 master 节点。</p>
+<p>如果某个非 master 节点宕机了。那么此节点上的 primary shard 就没了。那好，master 会让 primary shard 对应的 replica shard（在其他机器上）切换为 primary shard。如果宕机的机器修复了，修复后的节点上的shard也不再是 primary shard，而是 replica shard。同步后续修改的数据之类的，让集群恢复正常。</p>
+<p>上述就是 ElasticSearch 作为一个分布式搜索引擎最基本的一个架构设计。</p>
+<h4 id="2-说一下es的写入数据流程以及底层原理"><a href="#2-说一下es的写入数据流程以及底层原理" class="headerlink" title="2.说一下es的写入数据流程以及底层原理"></a>2.说一下es的写入数据流程以及底层原理</h4><p>1）客户端选择一个node (es节点)发送请求过去，这个node (es节点)就是coordinating node (协调节点)，对document (文档)进行路由，将请求转发给对应的node<br>2）实际的node上的primary shard处理请求，然后将数据同步到replica node<br>3）coordinating node，如果发现primary node和所有replica node都搞定之后，就返回响应结果给客户端</p>
+<p>es写入数据的原理</p>
+<p><img src="https://xbq.oss-cn-shenzhen.aliyuncs.com/blog/es/1571823227631.png" alt="1571823227631"></p>
+<ol>
+<li><p>先写入buffer，在buffer里的时候数据是搜索不到的；同时将数据写入translog日志文件</p>
+</li>
+<li><p>如果buffer快满了，或者每隔一秒钟，就会将buffer数据refresh到一个新的segment file中并清空buffer，但是此时数据不是直接进入segment file的磁盘文件的，而是先进入os cache的。当数据进入os cache后，就代表该数据可以被检索到了。因此说es是准实时的，这个过程就是<strong>refresh</strong>。</p>
+</li>
+<li><p>只要数据进入os cache，此时就可以让这个segment file的数据对外提供搜索了</p>
+</li>
+<li><p>重复1~3步骤，新的数据不断进入buffer和translog，不断将buffer数据写入一个又一个新的segment file中去，每次refresh完buffer清空，translog保留。随着这个过程推进，translog会变得越来越大。当translog达到一定长度的时候，就会触发commit操作。</p>
+<p><strong>commit</strong>操作（也叫<strong>flush</strong>操作，默认每隔30分钟执行一次）：执行refresh操作 -&gt; 写commit point -&gt; 将os cache数据fsync强刷到磁盘上去 -&gt; 清空translog日志文件</p>
+<p>commit操作保证了在机器宕机时，buffer和os cache中未同步到segment file中的数据还可以在重启之后恢复到内存buffer和os cache中去，</p>
+</li>
+<li><p>translog其实也是先写入os cache的，默认每隔5秒刷一次到磁盘中去，所以默认情况下，可能有5秒的数据会仅仅停留在buffer或者translog文件的os cache中，如果此时机器挂了，会丢失5秒钟的数据。但是这样性能比较好，最多丢5秒的数据。也可以将translog设置成每次写操作必须是直接fsync到磁盘，但是性能会差很多。</p>
+</li>
+<li><p>如果是删除操作，commit的时候会生成一个.del文件，里面将某个doc标识为deleted状态，那么搜索的时候根据.del文件就知道这个doc被删除了</p>
+</li>
+<li><p>如果是更新操作，就是将原来的doc标识为deleted状态，然后新写入一条数据</p>
+</li>
+<li><p>buffer每次refresh一次，就会产生一个segment file，所以默认情况下是1秒钟一个segment file，segment file会越来越多，此时会定期执行merge,当segment多到一定的程度时，自动触发merge操作</p>
+</li>
+<li><p>每次<strong>merge</strong>的时候，会将多个segment file合并成一个，同时这里会将标识为deleted的doc给物理删除掉，然后将新的segment file写入磁盘，这里会写一个commit point，标识所有新的segment file，然后打开segment file供搜索使用，同时删除旧的segment file。</p>
+</li>
 </ol>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/fRIibNUyzo4JtiayqnNmJFw69m7xWicKRWG4b4BsOExhllHFO1iar43twAKicJJR9ovXh4NSY0CxIpaVU5wlUNibMlWw/640?wx_fmt=png" alt="img"></p>
-<h3 id="安装配置环境变量"><a href="#安装配置环境变量" class="headerlink" title="安装配置环境变量"></a>安装配置环境变量</h3><p>1.假设将安装包安装在D盘，新建 如下环境变量：</p>
+<h4 id="3-说一下es的读数据流程"><a href="#3-说一下es的读数据流程" class="headerlink" title="3.说一下es的读数据流程"></a>3.说一下es的读数据流程</h4><p>读数据分为GET和Search，即查询一条 和 搜索操作。</p>
+<p><strong>查询：</strong></p>
+<p>查询操作，即GET某一条数据，写入了某个document，该document会自动给你分配一个全局唯一id-doc id，同时也是根据doc id进行hash路由到对应的primary shard上面去。当然也可以手动指定doc id,比如用订单id，用户id。</p>
+<p>可以通过doc id来查询，会根据doc id进行hash，判断出当时把doc id分配到了哪个shard，从那个shard去查询</p>
 <ul>
-<li>GPROOT：Go的安装路径</li>
-<li>GOPATH：Go的工程路径（如果有多个，就以分号分隔添加）</li>
+<li>客户端发送请求到任意一个node（节点），成为coordinate node（协调节点）</li>
+<li>coordinate node（协调节点）对document路由,将请求转发到对应的node,此时会使用round-robin随机轮询算法，在primary shard及其所有replica中随机选择，使读请求负载均衡</li>
+<li>接收请求的node返回document给coordinate node（协调节点）</li>
+<li>coordinate node（协调节点）返回document给客户端</li>
 </ul>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/fRIibNUyzo4JtiayqnNmJFw69m7xWicKRWGzTImmTpZicZkfZswjZg6zNu5FJQ66cLzFf7rpAxqnnsmQDzok3GNuhA/640?wx_fmt=png" alt="img"></p>
-<p>在PATH中增加：D:\Go\bin;%GOPATH%\bin;</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/fRIibNUyzo4JtiayqnNmJFw69m7xWicKRWG6WnTqrDOq0Lw3CWqzOhrE9Nw00libc7xRic3M3Jb8Q2bDdsxcxiaGbldw/640?wx_fmt=png" alt="img"></p>
-<p>注：需要把GOPATH中的可执行目录页配置到环境变量中，否则下载的第三方go工具就无法使用了。</p>
-<p>2.查看是否安装成功</p>
+<p><strong>搜索：</strong></p>
 <ul>
-<li>go env：查看得到的go的配置信息</li>
-<li>go version：查看go的版本号</li>
+<li>客户端发送请求到一个<code>coordinate node</code></li>
+<li>协调节点将搜索请求转发到所有的shard对应的<code>primary shard</code>或<code>replica shard</code></li>
+<li>query phase<br>每个shard将自己的搜索结果（本质上就是一些doc id），返回给<code>coordinate node</code>，由<code>coordinate node</code>进行数据的合并、排序、分页等，以生成最终结果</li>
+<li>fetch phase<br>接着由<code>coordinate node</code>，根据doc id去各节点中拉取实际的<code>document</code>数据,最终返回给客户端</li>
 </ul>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/fRIibNUyzo4JtiayqnNmJFw69m7xWicKRWGuq5yxGcbz2ib9o4rQM0hRCa5gCicjnOkbDK3QvROVWSibKbm7eW7KpXKg/640?wx_fmt=png" alt="img"></p>
-<h3 id="编译工具安装"><a href="#编译工具安装" class="headerlink" title="编译工具安装"></a>编译工具安装</h3><p>这里使用的编译编译工具是goland，比较方便好用，用惯了IDEA的，用这个很顺手。</p>
-<p>1.下载goland，地址见百度网盘： 链接：<a href="https://pan.baidu.com/s/1xEUsFpnfjOAb9ceZ4IzcHA" target="_blank" rel="noopener">https://pan.baidu.com/s/1xEUsFpnfjOAb9ceZ4IzcHA</a> ，提取码：t5mt 。</p>
-<p>2.安装</p>
-<p>安装属于傻瓜式安装，一路next即可，破解方法也在百度网盘中。</p>
-<h3 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">    /* 这是一个简单的程序 */</span><br><span class="line">    fmt.Println(&quot;Hello World&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>1.第一行 package main 定义了包名。必须在源文件非注释的第一行指明这个文件属于哪个包，如：package main，表示一个科独立执行的程序，每个Go应用程序都包含一个名为main的包。</p>
-<p>2.下一行 import “fmt”，告诉Go编译器这个程序需要使用fmt包，fmt包中实现了格式化IO的函数。</p>
-<p>3.下一行的 func main() 是程序的入口。main函数式每一个可执行程序必须包含的，一般来说都是在启动后的第一个可执行函数，如果有 init() 函数，则先执行 init() 函数。</p>
-<p>4.下一行/<em> … </em>/ 是注释，在程序执行时被忽略。</p>
-<p>5.下一行 fmt.Println( .. ) 可以将字符串输出到控制台上，并在最后增加换行符 \n 。</p>
-<h3 id="编码规范"><a href="#编码规范" class="headerlink" title="编码规范"></a>编码规范</h3><p><strong>注释</strong></p>
-<ul>
-<li>单行注释是最常见的注释形式，可以再任何地方使用以 // 开头的单行注释</li>
-<li>多行注释也叫块注释，均已 /<em> 开头，并以 </em>/ 结尾，且不可以嵌套使用，多行注释一般用于文档描述或注释成块的代码片段。</li>
-</ul>
-<p><strong>标识符</strong></p>
-<ol>
-<li>标识符是用来命名变量、类型等程序实体。一个标识符实际上就是一个或者多个字母数字、下划线组成的序列，但是第一个字符必须是以字母或者下划线，而不能是数字。</li>
-<li>Go不允许在标识符中使用@、$和&amp;等标识符。</li>
-<li>Go是一种区分大小写的语言。</li>
-</ol>
-<p><strong>空格</strong></p>
-<ol>
-<li>Go语言中变量的声明必须使用空格隔开，如：var age int</li>
-<li>语句中适当使用空格可以让程序更简易阅读</li>
-<li>在变量与运算符间增加空格，程序会更加美观。</li>
-</ol>
-<p><strong>语句的结尾</strong></p>
-<ol>
-<li>在Go程序中，一行代表一个语句结束，不用使用分号结尾</li>
-<li>如果需要将多个语句写在一行，必须使用分号区分</li>
-</ol>
-<p><strong>可见性规则</strong></p>
-<ol>
-<li>Go语言中，使用大小来决定标识符（常量、变量。接口、类型、结构或者函数）是否可以被外部包所调用</li>
-<li>以大写字母开头，表示可以被外部包的代码所调用，此时就类似于Java中加了public</li>
-<li>以小写字母开头，则对包外是不可见的，就类型与Java中加了private</li>
-</ol>
-<h3 id="Go程序结构组成"><a href="#Go程序结构组成" class="headerlink" title="Go程序结构组成"></a>Go程序结构组成</h3><p><strong>Go一般程序</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">// 当前的包名</span><br><span class="line">package main</span><br><span class="line"></span><br><span class="line">// 导入包名</span><br><span class="line">import . &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">// 常量定义</span><br><span class="line">const  PI = 3.14</span><br><span class="line"></span><br><span class="line">// 全局类型的声明和赋值</span><br><span class="line">var name = &quot;Joe&quot;</span><br><span class="line"></span><br><span class="line">// 一般类型声明</span><br><span class="line">type newType int</span><br><span class="line"></span><br><span class="line">// 结构的声明</span><br><span class="line">type Joe struct &#123;&#125;</span><br><span class="line"></span><br><span class="line">// 接口的声明</span><br><span class="line">type xbq interface &#123;&#125;</span><br><span class="line"></span><br><span class="line">// 由main函数作为程序入口点启动</span><br><span class="line">func main()  &#123;</span><br><span class="line">    Println(&quot;hello World&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>Go文件的基本组成</strong></p>
-<ol>
-<li>包声明</li>
-<li>引入包</li>
-<li>函数</li>
-<li>变量</li>
-<li>语句 &amp; 表达式</li>
-<li>注释</li>
-</ol>
-<p><strong>Go文件结构组成</strong></p>
-<ol>
-<li>Go程序是通过 package 来组织的</li>
-<li>只有 package 名称为 main 的包可以包含 main 函数</li>
-<li>一个可执行程序有且仅有一个 main 包</li>
-<li>通过 import 关键字来导入其他非main包</li>
-<li>可以通过 import 关键字单个导入，也可以多个导入</li>
-<li>程序一般由关键字、常量、变量、运算符、类型和函数组成</li>
-<li>程序中可能会使用这些分隔符，括号、中括号 和 大括号</li>
-<li>程序中可能会使用这些标点符号，点（.）、逗号（,）、分号（;）、冒号（:）、省略号（…）</li>
-<li>通过在函数体外部使用 var 关键字来进行全局变量的声明和赋值</li>
-<li>通过 type 关键字来进行结构（struct）和接口（interface）的声明</li>
-<li>通过 func 关键字来进行函数的声明</li>
-</ol>
+<h4 id="4-为什么es集群至少需要三个节点"><a href="#4-为什么es集群至少需要三个节点" class="headerlink" title="4.为什么es集群至少需要三个节点"></a>4.为什么es集群至少需要三个节点</h4><p>首先需要知道一点：es的配置文件中有一个配置：discovery.zen.minimum_master_nodes:2 ，默认是2，即选举Master时需要的节点数。</p>
+<p>假设es有两个节点，master node 和 data node，即选举Master时锁需要的节点为 1，此时出现网络波动，导致 master node 和 data node出现短暂的断开连接，根据选举规则，data node将自己选举为master，当网络波动结束后，就会出现两个master，即我们所说的脑裂。</p>
+<p>当es有三个节点，master node、data data（A）、data node（B），即选举Master时锁需要的节点为 2，此时出现网络波动，master node 和 A 、B断开连接，则 master node降级，A、B进行选举，假设选举为A为master，当网络恢复后，之前的 master node –&gt; data node，之前的 data node（A）–&gt; master node。</p>
+<p>所以，通过配置 minimum_master_nodes 来防止出现脑裂，在生产过程中, 为了尽量保持集群高可用, 至少需要三台机器搭建集群。</p>
 
       
     </div>
@@ -624,8 +592,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/26/Go语言学习-4-基本数据类型/" rel="next" title="Go语言学习(4) - 基本数据类型">
-                <i class="fa fa-chevron-left"></i> Go语言学习(4) - 基本数据类型
+              <a href="/2019/10/23/Sql性能优化梳理/" rel="next" title="Sql性能优化梳理">
+                <i class="fa fa-chevron-left"></i> Sql性能优化梳理
               </a>
             
           </div>
@@ -633,10 +601,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/12/07/Go语言学习-5-打印格式化/" rel="prev" title="Go语言学习(5) - 打印格式化">
-                Go语言学习(5) - 打印格式化 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -870,7 +834,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载地址"><span class="nav-text">下载地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装配置环境变量"><span class="nav-text">安装配置环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编译工具安装"><span class="nav-text">编译工具安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hello-World"><span class="nav-text">Hello World</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编码规范"><span class="nav-text">编码规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Go程序结构组成"><span class="nav-text">Go程序结构组成</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-说一下es的分布式架构原理-es是如何实现分布式的"><span class="nav-text">1.说一下es的分布式架构原理 / es是如何实现分布式的</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-说一下es的写入数据流程以及底层原理"><span class="nav-text">2.说一下es的写入数据流程以及底层原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-说一下es的读数据流程"><span class="nav-text">3.说一下es的读数据流程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-为什么es集群至少需要三个节点"><span class="nav-text">4.为什么es集群至少需要三个节点</span></a></li></ol></div>
             
 
           </div>
