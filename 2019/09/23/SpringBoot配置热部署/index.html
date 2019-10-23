@@ -119,17 +119,17 @@
 
 
 
-<meta name="description" content="1.spring-boot-devtools 在pom中直接引入依赖 12345&amp;lt;dependency&amp;gt;        &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;        &amp;lt;artifactId&amp;gt;spring-boot-devtools&amp;lt;/artifactId&amp;gt;        &amp;lt;op">
+<meta name="description" content="1.spring-boot-devtools在pom中直接引入依赖 12345&amp;lt;dependency&amp;gt;        &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;        &amp;lt;artifactId&amp;gt;spring-boot-devtools&amp;lt;/artifactId&amp;gt;        &amp;lt;opt">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SpringBoot配置热部署">
 <meta property="og:url" content="http://yoursite.com/2019/09/23/SpringBoot配置热部署/index.html">
 <meta property="og:site_name" content="JoeBlog">
-<meta property="og:description" content="1.spring-boot-devtools 在pom中直接引入依赖 12345&amp;lt;dependency&amp;gt;        &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;        &amp;lt;artifactId&amp;gt;spring-boot-devtools&amp;lt;/artifactId&amp;gt;        &amp;lt;op">
+<meta property="og:description" content="1.spring-boot-devtools在pom中直接引入依赖 12345&amp;lt;dependency&amp;gt;        &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;        &amp;lt;artifactId&amp;gt;spring-boot-devtools&amp;lt;/artifactId&amp;gt;        &amp;lt;opt">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-23T07:13:42.252Z">
+<meta property="og:updated_time" content="2019-10-22T02:50:24.241Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SpringBoot配置热部署">
-<meta name="twitter:description" content="1.spring-boot-devtools 在pom中直接引入依赖 12345&amp;lt;dependency&amp;gt;        &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;        &amp;lt;artifactId&amp;gt;spring-boot-devtools&amp;lt;/artifactId&amp;gt;        &amp;lt;op">
+<meta name="twitter:description" content="1.spring-boot-devtools在pom中直接引入依赖 12345&amp;lt;dependency&amp;gt;        &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;        &amp;lt;artifactId&amp;gt;spring-boot-devtools&amp;lt;/artifactId&amp;gt;        &amp;lt;opt">
 
 
 
@@ -460,11 +460,9 @@
       
 
       
-        <p>1.spring-boot-devtools</p>
-<p>在pom中直接引入依赖</p>
+        <h4 id="1-spring-boot-devtools"><a href="#1-spring-boot-devtools" class="headerlink" title="1.spring-boot-devtools"></a>1.spring-boot-devtools</h4><p>在pom中直接引入依赖</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-boot-devtools&lt;/artifactId&gt;</span><br><span class="line">        &lt;optional&gt;true&lt;/optional&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
-<p>2.设置以下两项</p>
-<p>1） “File” -&gt; “Settings” -&gt; “Build,Execution,Deplyment” -&gt; “Compiler”，选中打勾 “Build project automatically” 。</p>
+<h4 id="2-设置以下两项"><a href="#2-设置以下两项" class="headerlink" title="2.设置以下两项"></a>2.设置以下两项</h4><p>1） “File” -&gt; “Settings” -&gt; “Build,Execution,Deplyment” -&gt; “Compiler”，选中打勾 “Build project automatically” 。</p>
 <p>2） 组合键：“Shift+Ctrl+Alt+/” ，选择 “Registry” ，选中打勾 “compiler.automake.allow.when.app.running” </p>
 <p>大功告成！</p>
 
@@ -646,8 +644,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -664,7 +671,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">104</span>
+                  <span class="site-state-item-count">106</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -675,7 +682,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -686,7 +693,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-count">41</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -703,7 +710,7 @@
 				 <span class="site-state-item-name">访客量</span>
 			</div>
 			<div class="site-state-item site-state-posts">
-				  <span class="site-state-item-count">145.1k</span>
+				  <span class="site-state-item-count">150.3k</span>
 				  <span class="site-state-item-name">总字数</span>
 			</div>
 
@@ -771,6 +778,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-spring-boot-devtools"><span class="nav-text">1.spring-boot-devtools</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-设置以下两项"><span class="nav-text">2.设置以下两项</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -809,7 +832,7 @@
     <!-- 博客字数统计 -->
     <span class="site-pv">
       <i class="fa fa-pencil"></i>
-      博客全站共 <span class="post-count">145.1k</span> 字
+      博客全站共 <span class="post-count">150.3k</span> 字
     </span>
 </div>
 
