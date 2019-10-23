@@ -121,7 +121,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="JoeBlog">
-<meta property="og:url" content="http://yoursite.com/categories/MySQL/index.html">
+<meta property="og:url" content="http://yoursite.com/categories/mysql/index.html">
 <meta property="og:site_name" content="JoeBlog">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
@@ -155,13 +155,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/MySQL/">
+  <link rel="canonical" href="http://yoursite.com/categories/mysql/">
 
 
 
 
 
-  <title>分类: MySQL | JoeBlog</title>
+  <title>分类: mysql | JoeBlog</title>
   
 
 
@@ -342,7 +342,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>MySQL<small>分类</small>
+        <h1>mysql<small>分类</small>
         </h1>
       </div>
 
@@ -354,95 +354,17 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2018/12/31/记一次从删库到恢复的经历/" itemprop="url">
+            <a class="post-title-link" href="/2019/10/23/Sql性能优化梳理/" itemprop="url">
               
-                <span itemprop="name">记一次从删库到恢复的经历</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-12-31T12:00:52+08:00" content="2018-12-31">
-          12-31
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/10/18/mysqldump导出完整sql脚本/" itemprop="url">
-              
-                <span itemprop="name">mysqldump导出完整sql脚本</span>
+                <span itemprop="name">Sql性能优化梳理</span>
               
             </a>
         
       </h2>
 
       <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-10-18T10:47:21+08:00" content="2018-10-18">
-          10-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/07/24/MySQL-行锁/" itemprop="url">
-              
-                <span itemprop="name">MySQL -- 行锁</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-07-24T17:12:00+08:00" content="2018-07-24">
-          07-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/07/24/MySQL-表锁/" itemprop="url">
-              
-                <span itemprop="name">MySQL -- 表锁</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-07-24T17:11:52+08:00" content="2018-07-24">
-          07-24
+        <time class="post-time" itemprop="dateCreated" datetime="2019-10-23T15:45:05+08:00" content="2019-10-23">
+          10-23
         </time>
       </div>
 
@@ -516,7 +438,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -527,7 +449,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-count">42</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1200,6 +1122,78 @@
             var newcounter = new Counter();
             /* Set ACL */
             var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+<script type="text/javascript">
+    //微信二维码点击背景关闭
+    $('body').delegate('.-mob-share-weixin-qrcode-bg','click', function(){
+         $(".-mob-share-weixin-qrcode-close").trigger("click");
+    }); 
+</script>
+
+   <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+   
+   
+   <div class="bg_content">
+	  <canvas id="canvas"></canvas>
+	</div>
+</body>
+<script type="text/javascript" src="/js/src/love.js"></script>
+<script type="text/javascript" src="/js/src/dynamic_bg.js"></script>
+<script type="text/javascript" src="/js/src/crash_cheat.js"></script>
+<!-- 代码块复制功能 
+<script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
+<script type="text/javascript" src="/js/src/clipboard-use.js"></script> -->
+</html>
+cl = new AV.ACL();
             acl.setPublicReadAccess(true);
             acl.setPublicWriteAccess(true);
             newcounter.setACL(acl);
