@@ -127,7 +127,7 @@
 <meta property="og:site_name" content="JoeBlog">
 <meta property="og:description" content="前提配置邮箱和用户名 12$ git config --global user.name &quot;你的名字&quot;$ git config --global user.email &quot;你的邮箱&quot; 上传项目到github123456$ git init $ git add . (添加到暂存区里面去)$ git commit -m &apos;first commit&apos; (把文件提交到仓库)$ git remote add">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-13T05:48:12.336Z">
+<meta property="og:updated_time" content="2019-12-10T07:53:52.988Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git基本使用">
 <meta name="twitter:description" content="前提配置邮箱和用户名 12$ git config --global user.name &quot;你的名字&quot;$ git config --global user.email &quot;你的邮箱&quot; 上传项目到github123456$ git init $ git add . (添加到暂存区里面去)$ git commit -m &apos;first commit&apos; (把文件提交到仓库)$ git remote add">
@@ -446,7 +446,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  430 字
+                  463 字
                 </span>
               
 
@@ -487,7 +487,7 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git config --global user.name "你的名字"</span><br><span class="line"><span class="meta">$</span> git config --global user.email "你的邮箱"</span><br></pre></td></tr></table></figure>
 <h4 id="上传项目到github"><a href="#上传项目到github" class="headerlink" title="上传项目到github"></a>上传项目到github</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git init </span><br><span class="line"><span class="meta">$</span> git add . (添加到暂存区里面去)</span><br><span class="line"><span class="meta">$</span> git commit -m 'first commit' (把文件提交到仓库)</span><br><span class="line"><span class="meta">$</span> git remote add origin https://github.com/xxx/xxx.git  (关联到远程库)</span><br><span class="line"><span class="meta">$</span> git pull --rebase origin master (获取远程库与本地同步合并（如果远程库不为空必须做这一步，否则后面的提交会失败）)</span><br><span class="line"><span class="meta">$</span> git push -u origin master  (把本地库的内容推送到远程)</span><br></pre></td></tr></table></figure>
 <h5 id="1-初始化"><a href="#1-初始化" class="headerlink" title="1.初始化"></a>1.初始化</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git init</span><br></pre></td></tr></table></figure>
-<h5 id="2-提交"><a href="#2-提交" class="headerlink" title="2.提交"></a>2.提交</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git pull origin master</span><br><span class="line"><span class="meta">$</span> git touch init.txt //如果已经存在更改的文件,则这一步不是必须的</span><br><span class="line"><span class="meta">$</span> git add .</span><br><span class="line"><span class="meta">$</span> git commit -m "first commit"</span><br><span class="line"><span class="meta">$</span> git push -u origin master     # 第一次提交需要加 -u</span><br><span class="line"><span class="meta">$</span> git push origin master        # 后面提交就不需要-u了</span><br><span class="line"><span class="meta">$</span> git push -u origin master -f  # 强制覆盖解决(慎用)</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 同步冲突</span><br><span class="line">如果您舍弃线上的文件，则在推送时选择强制推送，强制推送需要执行下面的命令</span><br><span class="line"><span class="meta">$</span> git push origin master -f</span><br><span class="line"></span><br><span class="line">如果您选择保留线上的文件,则需要先执行</span><br><span class="line">git pull origin master</span><br><span class="line">然后才可以推送,如果发生冲突，则需要先解决冲突</span><br></pre></td></tr></table></figure>
+<h5 id="2-提交"><a href="#2-提交" class="headerlink" title="2.提交"></a>2.提交</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git pull origin master</span><br><span class="line"><span class="meta">$</span> git touch init.txt //如果已经存在更改的文件,则这一步不是必须的</span><br><span class="line"><span class="meta">$</span> git add .</span><br><span class="line"><span class="meta">$</span> git commit -m "first commit"</span><br><span class="line"><span class="meta">$</span> git push -u origin master     # 第一次提交需要加 -u</span><br><span class="line"><span class="meta">$</span> git push origin master        # 后面提交就不需要-u了</span><br><span class="line"><span class="meta">$</span> git push -u origin master -f  # 强制覆盖解决(慎用)</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 同步冲突</span><br><span class="line">如果您舍弃线上的文件，则在推送时选择强制推送，强制推送需要执行下面的命令</span><br><span class="line"><span class="meta">$</span> git push origin master -f</span><br><span class="line"></span><br><span class="line">如果您选择保留线上的文件,则需要先执行</span><br><span class="line">git pull origin master</span><br><span class="line">然后才可以推送,如果发生冲突，则需要先解决冲突</span><br><span class="line"></span><br><span class="line">1.git status  查看当前状态</span><br><span class="line">2.git add .  或者 git add xxx</span><br><span class="line">3.git commit -m "提交代码"</span><br><span class="line">4.git push</span><br></pre></td></tr></table></figure>
 <h4 id="更新项目"><a href="#更新项目" class="headerlink" title="更新项目"></a>更新项目</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git pull --rebase origin master(会覆盖本地文件，慎用)</span><br><span class="line">或者：</span><br><span class="line"><span class="meta">$</span> git fetch --all</span><br><span class="line"><span class="meta">$</span> git reset --hard origin/master</span><br></pre></td></tr></table></figure>
 <h4 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h4><p>1.当出现no changes added to commit时如何正确使用git提交命令<br>对于这个问题，最好的解决方法就是按如下步骤：</p>
 <ul>
@@ -707,7 +707,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">108</span>
+                  <span class="site-state-item-count">109</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -746,7 +746,7 @@
 				 <span class="site-state-item-name">访客量</span>
 			</div>
 			<div class="site-state-item site-state-posts">
-				  <span class="site-state-item-count">155.4k</span>
+				  <span class="site-state-item-count">155.7k</span>
 				  <span class="site-state-item-name">总字数</span>
 			</div>
 
@@ -868,7 +868,7 @@
     <!-- 博客字数统计 -->
     <span class="site-pv">
       <i class="fa fa-pencil"></i>
-      博客全站共 <span class="post-count">155.4k</span> 字
+      博客全站共 <span class="post-count">155.7k</span> 字
     </span>
 </div>
 
